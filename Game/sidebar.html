@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      transition: transform 0.3s;
+      margin-top: 20px;
+      left: 0;
+      padding: 10px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .fas.fa-home , .fas {
+      right: 0;
+      color: aliceblue;
+    }
+
+
+  </style>
+</head>
+<body>
+  <button id="animateButton">Animate</button>
+  <div class="box" id="box">
+  </div>
+
+  <script>
+    const box = document.getElementById("box");
+    const animateButton = document.getElementById("animateButton");
+    let isShifted = false;
+
+    animateButton.addEventListener("click", () => {
+      if (!isShifted) {
+        box.style.transform = "translateX(-50px)";
+      } else {
+        box.style.transform = "translateX(0)";
+      }
+      isShifted = !isShifted;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Multi User</title>
+</head>
+<body>
+
+<h1>Silakan Login</h1>
+<input type="text" id="username" placeholder="Username"><br>
+<input type="password" id="password" placeholder="Password"><br>
+<button id="loginButton">Login</button>
+<p id="message"></p>
+
+<script>
+const users = [
+  { username: "user1", password: "pass1", role: "user" },
+  { username: "user2", password: "pass2", role: "user" },
+  { username: "admin", password: "adminpass", role: "admin" }
+];
+
+const loginButton = document.getElementById("loginButton");
+const messageElement = document.getElementById("message");
+
+loginButton.addEventListener("click", function() {
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  const user = users.find(user => user.username === username && user.password === password);
+
+  if (user) {
+    if (user.role === "user") {
+      window.location.href = "user.html";
+    } else if (user.role === "admin") {
+      window.location.href = "admin.html";
+    }
+  } else {
+    messageElement.textContent = "Login gagal. Coba lagi.";
+  }
+});
+</script>
+
+</body>
+</html>

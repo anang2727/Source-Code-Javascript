@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Play & Pause Multiple Audio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <audio id="audio1" src="aku.mp3"></audio>
+  <audio id="audio2" src="kamu.mp3"></audio>
+  <audio id="audio3" src="akatsuki.mp3"></audio>
+
+  <button class="toggleButton" data-audio="audio1"><i class="fas fa-play"></i></button>
+  <button class="toggleButton" data-audio="audio2"><i class="fas fa-play"></i></button>
+  <button class="toggleButton" data-audio="audio3"><i class="fas fa-play"></i></button>
+
+  <script>
+    const toggleButtons = document.querySelectorAll(".toggleButton");
+
+    toggleButtons.forEach(button => {
+      const audioId = button.getAttribute("data-audio");
+      const audio = document.getElementById(audioId);
+      let isPlaying = false;
+
+      button.addEventListener("click", () => {
+        if (!isPlaying) {
+          audio.play();
+          button.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+          audio.pause();
+          button.innerHTML = '<i class="fas fa-play"></i>';
+        }
+        isPlaying = !isPlaying;
+      });
+    });
+  </script>
+</body>
+</html>

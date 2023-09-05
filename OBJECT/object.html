@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objek Javascript</title>
+</head>
+<body>
+    <script>
+
+        // let nama = prompt("Masukkan nama Anda")
+        // let npm = prompt("Masukkan Npm Anda")
+        // let unit = prompt("Masukkan Unit Anda")
+        
+        // let warna = new Map();
+
+        // menentukan key dan nilainya
+        // warna.set('Nama', nama); // Nama warna adalah kuncinya(key) sedangkan 12 adalah nilainya
+        // warna.set('Npm', npm);
+        // warna.set('Unit', unit);
+
+        // console.log(warna.has('Npm')) // Has Untuk memeriksa apakah ada key di cari di dalamnya
+
+        // Cetak Ke konsol
+        // console.log("Nama Lengkap :"+ " " + (warna.get('Nama')));
+        // console.log(warna.get('Npm'));
+        // console.log(warna.get('Unit'));
+//=========================================== 
+
+        // let objek = {
+        //     Nama : 'Anang Kurniawan',
+        //     Npm : 2105020103,
+        //     Unit : "A",
+        //     Code : [1,2,3]
+        // }
+
+        // console.log(objek.Code[1]);
+
+//=========================================== 
+// OBJECT LITERAL 
+// 1
+// let contoh = {
+//     namaPertama : "Anang Kurniawan",
+//     namaKedua : "Dia"
+// }
+// console.log(contoh);
+
+// 2
+// let data = {
+//     nama: "Anang Kurniawan",
+//     nilai : 20,
+//     hasil : function (keluar) {
+//         this.hasil = this.hasil + keluar;
+//         console.log(this.nama);
+//     }
+// }
+
+
+//  FUNCTIONS LITERATION
+// 1
+
+// function data(nama,nilai){
+//     let datas = {};
+//     datas.nama = nama;
+//     datas.nilai = nilai;
+
+//     datas.hasil = function (aaa){
+//         this.nilai += aaa;
+//         console.log(`adalah ${this.nilai}`)
+//     }  
+//         datas.waktu = function (bbb){
+//             this.nilai += bbb;
+//             console.log(`adalah ${this.nilai}`)
+//         }
+    
+    //return datas // harus menggunakan return untuk function literation
+// }
+
+// let aku = data('anang', 23);
+// let saat = data('anang',2);
+
+
+// CONSTRUCTOR FUNCTIONS
+// 1
+// function data(nama,nilai){
+//     let datas = {};
+//     this.nama = nama;
+//     this.nilai = nilai;
+
+//     this.hasil = function (aaa){
+//         this.nilai += aaa;
+//         console.log(`adalah ${this.nilai}`)
+//     }  
+//         this.waktu = function (bbb){
+//             this.nilai += bbb;
+//             console.log(`adalah ${this.nilai}`)
+//         }
+    
+    //return datas // tidak  menggunakan return pada function ini
+// }
+
+// let aku = new data('anang', 23); // harus menggunakan new  untuk mendeklarasi nya
+// let saat = new data('anang',2);
+
+// OBJECT CREATE 
+// const aku = {
+//     satu: function(e){
+//         console.log(`Hai Nama Saya ${this.nama}`);
+//         console.log(`Alamat ${this.alamat}`);
+//         console.log(`Umur Saya ${this.umur} Tahun`);  
+//     }
+// }
+
+// const nilai = {
+//     lima: function(e){
+//         console.log(`Totalnya : ${(this.indo + this.arab + this.ing) *2 }`);
+//     }
+// }
+
+// const data = Object.create(aku);
+//     data.nama= 'Anang Kurniawan';
+//     data.alamat= 'Ulee Jalan';
+//     data.umur = 20;
+//     data.satu();
+
+// const nilai2 = Object.create(nilai);
+//     nilai2.indo = 25;
+//     nilai2.arab = 25;
+//     nilai2.ing = 25;
+    // nilai2.lima();
+    </script>
+</body>
+</html>

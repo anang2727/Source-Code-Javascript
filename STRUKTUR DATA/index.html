@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+
+        // PROPERTY pada Constructor Function Yaitu menggunakan THIS pada objek nya
+        // function Data(){
+            // this.nama = "" //Bisa diisi dan tidak
+        // }
+
+        // let satu = new Data();
+        // satu.nama = 'Anang ' // Output -> Data {nama: 'Anang'}
+
+        // =================================================== 
+        // METHOD pada Constructor function yang ada function lain didalam object 
+        
+        // function Data (){
+            // this.biodata = function(e){
+                // console.log(`Nama Saya ${e},`)
+            // }
+        // }
+
+        // let hasil = new Data();
+        // hasil.biodata('Anang') //   Output -> Nama Saya Anang,
+        // =================================================== 
+        // PARAMETER pada Constructor function  
+            //    function Data (akhir){
+        //         // this.akhir = akhir;
+        //         this.biodata = function(e){
+        //         console.log(`Nama Saya ${e} ${akhir}`);
+        //     }
+        // }
+
+        // let hasil = new Data('Kurniawan');
+        // hasil.biodata('Anang') //   Output -> Nama Saya Anang Kurniawan
+        
+        // =================================================== 
+        // CONSTRUCTOR INHERITANCE
+                // function Data (akhir){
+                // this.biodata = function(e){
+                // console.log(`Nama Saya ${e} ${akhir}`);
+                // }
+
+                // }
+
+                // function Manager(awal, akhir){
+                //     this.akhir = akhir;
+                //     Data.call(this.akhir);
+                // }
+                
+                // let hasil = new Manager("Anang");
+                // console.log(hasil)
+        // =================================================== 
+        // PROTOTYPE PADA CONSTRUCTION FUNCTION 
+        function Data (awal, akhir){
+            this.awal = awal;
+            this.akhir = akhir;
+        }
+        let hasil = new Data("Anang","Kurniawan");
+        
+        
+        Data.prototype.namaNya = function(){
+            console.log("Hallo")
+        }
+
+        Data.prototype.aku = function(){
+            console.log(`Selamat ${this.awal}`)
+        }
+        
+
+        // =================================================== 
+    </script>
+</body>
+</html>           
